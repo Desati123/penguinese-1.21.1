@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "penguinese",
+	"version": "${version}",
+	"name": "Penguinese",
+	"description": "[WIP] An icy expansion for Minecraft's coldest regions",
+	"authors": [
+		"Desati"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/penguinese/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.desati.penguinese.Penguinese"
+		],
+		"fabric-datagen": [
+			"net.desati.penguinese.PenguineseDataGenerator"
+		],
+		"client": [
+			"net.desati.penguinese.PenguineseClient"
+		]
+	},
+	"mixins": [
+		"penguinese.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
