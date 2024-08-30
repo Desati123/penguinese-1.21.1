@@ -1,4 +1,6 @@
 {
   "item.penguinese.ice_cube": "Ice Cube",
-  "item.penguinese.ice_sheet": "Ice Sheet"
+  "item.penguinese.ice_sheet": "Ice Sheet",
+
+  "block.penguinese.black_ice": "Black Ice"
 }

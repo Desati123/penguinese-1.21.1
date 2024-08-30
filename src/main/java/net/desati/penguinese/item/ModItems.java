@@ -7,9 +7,10 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
-    public static final Item ICE_CUBE = registerItem("ice_cube", new Item(new Item.Settings()));
+    public static final Item ICE_CUBE = registerItem("ice_cube", new Item(new Item.Settings().food(ModFoodComponents.ICE_CUBE)));
     public static final Item ICE_SHEET = registerItem("ice_sheet", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {

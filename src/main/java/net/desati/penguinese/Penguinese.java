@@ -1,5 +1,6 @@
 package net.desati.penguinese;
 
+import net.desati.penguinese.block.ModBlocks;
 import net.desati.penguinese.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,5 +14,6 @@ public class Penguinese implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
