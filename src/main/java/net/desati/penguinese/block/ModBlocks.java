@@ -12,15 +12,21 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 
 public class ModBlocks {
-    public static final Block BLACK_ICE = registerBlock("black_ice",
+    public static final Block BLACK_ICE = Registry.register(Registries.BLOCK, Identifier.of(Penguinese.MOD_ID, "black_ice"),
             new Block(AbstractBlock.Settings.create()
                     .strength(1.5f,2.5f)
                     .sounds(BlockSoundGroup.GLASS)
                     .mapColor(MapColor.TERRACOTTA_BLACK)
                     .slipperiness(0.99F)));
+
+//    public static final Block BLACK_ICE = registerBlock("black_ice",
+//            new Block(AbstractBlock.Settings.create()
+//                    .strength(1.5f,2.5f)
+//                    .sounds(BlockSoundGroup.GLASS)
+//                    .mapColor(MapColor.TERRACOTTA_BLACK)
+//                    .slipperiness(0.99F)));
 
 
 
