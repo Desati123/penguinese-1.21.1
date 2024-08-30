@@ -6,5 +6,8 @@
   "item.penguinese.blue_ice_shard": "Blue Ice Shard",
   "item.penguinese.black_ice_shard": "Black Ice Shard",
 
-  "block.penguinese.black_ice": "Black Ice"
+  "block.penguinese.black_ice": "Black Ice",
+
+  "itemgroup.penguinese.penguinese_items": "Penguinese Items",
+  "itemgroup.penguinese.penguinese_blocks": "Penguinese Blocks"
 }

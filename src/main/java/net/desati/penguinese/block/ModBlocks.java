@@ -44,7 +44,7 @@ public class ModBlocks {
         Penguinese.LOGGER.info("Registering Mod Blocks for " + Penguinese.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
-            entries.add(ModBlocks.BLACK_ICE);
+//            entries.add(ModBlocks.BLACK_ICE);
         });
     }
 }
