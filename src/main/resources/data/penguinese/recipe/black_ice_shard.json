@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "penguinese:black_ice"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "penguinese:black_ice_shard"
+  }
+}
