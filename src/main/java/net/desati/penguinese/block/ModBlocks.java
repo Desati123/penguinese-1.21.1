@@ -14,12 +14,14 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block BLACK_ICE = Registry.register(Registries.BLOCK, Identifier.of(Penguinese.MOD_ID, "black_ice"),
-            new Block(AbstractBlock.Settings.create()
+    public static final Block BLACK_ICE = new BlackIceBoost(AbstractBlock.Settings.create()
                     .strength(1.5f,2.5f)
                     .sounds(BlockSoundGroup.GLASS)
                     .mapColor(MapColor.TERRACOTTA_BLACK)
-                    .slipperiness(0.99F)));
+                    .slipperiness(1F)
+                    .requiresTool()
+            );
+
 
 //    public static final Block BLACK_ICE = registerBlock("black_ice",
 //            new Block(AbstractBlock.Settings.create()
@@ -43,8 +45,6 @@ public class ModBlocks {
     public static void registerModBlocks() {
         Penguinese.LOGGER.info("Registering Mod Blocks for " + Penguinese.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
-//            entries.add(ModBlocks.BLACK_ICE);
-        });
+        Registry.register(Registries.BLOCK, Identifier.of(Penguinese.MOD_ID, "black_ice"), BLACK_ICE);
     }
 }
