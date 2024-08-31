@@ -21,10 +21,15 @@ public class BlackIceBoost extends Block {
             // Apply the speed effect for 1 second (20 ticks)
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20, 2, false, false, true));
         }
+
+        if (!world.isClient && entity instanceof BoatEntity boat) {
+            increaseBoatSpeed(boat);
+        }
         // Call the superclass method to ensure normal behavior is preserved
         super.onSteppedOn(world, pos, state, entity);
     }
 
+    // doesn't work at the moment, suggesting using Mixins
     private void increaseBoatSpeed(BoatEntity boat) {
         double speedMultiplier = 10.0;
         boat.setVelocity(boat.getVelocity().multiply(speedMultiplier));
