@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "penguinese:black_ice"
+    },
+    {
+      "item": "penguinese:ice_axe"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "penguinese:black_ice_sheet"
+  }
+}

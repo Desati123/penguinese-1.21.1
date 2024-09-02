@@ -28,19 +28,17 @@ public class BucketItemMixin {
 
     @Inject(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;getBlock()Lnet/minecraft/block/Block;", ordinal = 0), cancellable = true)
     public void testing(World world, PlayerEntity player, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir, @Local BlockState state, @Local BlockHitResult hit) {
-        System.out.println("1----");
         if (state.isOf(Blocks.SNOW_BLOCK)) {
-            System.out.println("2----");
-
             ItemStack itemStack = new ItemStack(ModItems.MELTWATER_BUCKET);
+
             player.incrementStat(Stats.USED.getOrCreateStat((BucketItem)(Object)this));
             world.emitGameEvent(player, GameEvent.FLUID_PICKUP, hit.getBlockPos());
             ItemStack itemStack3 = ItemUsage.exchangeStack(player.getMainHandStack(), player, itemStack);
-            world.setBlockState(hit.getBlockPos(), Blocks.AIR.getDefaultState());
-            if (!world.isClient) {
-                System.out.println("3----");
-                Criteria.FILLED_BUCKET.trigger((ServerPlayerEntity)player, itemStack);
 
+            world.setBlockState(hit.getBlockPos(), Blocks.AIR.getDefaultState());
+
+            if (!world.isClient) {
+                Criteria.FILLED_BUCKET.trigger((ServerPlayerEntity)player, itemStack);
             }
 
             // Play the standard liquid bucket fill sound

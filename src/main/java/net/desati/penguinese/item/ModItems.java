@@ -20,6 +20,8 @@ public class ModItems {
     public static final Item BLUE_ICE_SHARD = registerItem("blue_ice_shard", new Item(new Item.Settings()));
     public static final Item MELTWATER_BUCKET = registerItem("meltwater_bucket", new Meltwater_BucketItem(new Item.Settings()));
     public static final Item BLACK_ICE_SHARD = registerItem("black_ice_shard", new Item(new Item.Settings().rarity(Rarity.UNCOMMON)));
+    public static final Item BLACK_ICE_SHEET = registerItem("black_ice_sheet", new Item(new Item.Settings().rarity(Rarity.UNCOMMON)));
+    public static final Item ICE_AXE = registerItem("ice_axe", new Item(new Item.Settings()));
 
     public static final Item BLACK_ICE = registerItem("black_ice", new BlockItem(ModBlocks.BLACK_ICE, new Item.Settings().rarity(Rarity.UNCOMMON)));
 
