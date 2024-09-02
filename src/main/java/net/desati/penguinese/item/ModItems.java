@@ -2,6 +2,7 @@ package net.desati.penguinese.item;
 
 import net.desati.penguinese.Penguinese;
 import net.desati.penguinese.block.ModBlocks;
+import net.desati.penguinese.item.custom.Meltwater_BucketItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -17,6 +18,7 @@ public class ModItems {
     public static final Item ICE_SHARD = registerItem("ice_shard", new Item(new Item.Settings()));
     public static final Item PACKED_ICE_SHARD = registerItem("packed_ice_shard", new Item(new Item.Settings()));
     public static final Item BLUE_ICE_SHARD = registerItem("blue_ice_shard", new Item(new Item.Settings()));
+    public static final Item MELTWATER_BUCKET = registerItem("meltwater_bucket", new Meltwater_BucketItem(new Item.Settings()));
     public static final Item BLACK_ICE_SHARD = registerItem("black_ice_shard", new Item(new Item.Settings().rarity(Rarity.UNCOMMON)));
 
     public static final Item BLACK_ICE = registerItem("black_ice", new BlockItem(ModBlocks.BLACK_ICE, new Item.Settings().rarity(Rarity.UNCOMMON)));
@@ -28,14 +30,14 @@ public class ModItems {
     public static void registerModItems() {
         Penguinese.LOGGER.info("Registering Mod Items For " + Penguinese.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(ICE_CUBE);
-            entries.add(ICE_SHEET);
-            entries.add(ICE_SHARD);
-            entries.add(PACKED_ICE_SHARD);
-            entries.add(BLUE_ICE_SHARD);
-            entries.add(BLACK_ICE_SHARD);
-
-        });
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+//            entries.add(ICE_CUBE);
+//            entries.add(ICE_SHEET);
+//            entries.add(ICE_SHARD);
+//            entries.add(PACKED_ICE_SHARD);
+//            entries.add(BLUE_ICE_SHARD);
+//            entries.add(BLACK_ICE_SHARD);
+//
+//        });
     }
 }

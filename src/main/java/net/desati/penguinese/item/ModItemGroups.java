@@ -23,6 +23,8 @@ public class ModItemGroups {
                         entries.add(ModItems.PACKED_ICE_SHARD);
                         entries.add(ModItems.BLUE_ICE_SHARD);
                         entries.add(ModItems.BLACK_ICE_SHARD);
+                        entries.add(ModItems.MELTWATER_BUCKET);
+
 
                     }).build());
 
